@@ -1,0 +1,120 @@
+footer {
+  position: relative;
+
+  height: 87px;
+
+  background-color: @sherpa_blue;
+
+  .wrap-social {
+    margin-top: -26px;
+
+    ul.social {     
+      margin-bottom: 0;
+
+      li {
+        margin-right: 23px;
+        padding: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          display: inline-block;
+          height: 53px;
+          width: 53px;
+
+          border-radius: 50%;
+
+          &.fb {
+            background: url("../../images/fb.png") center center no-repeat @robins_egg_blue;
+          }
+
+          &.tw {
+            background: url("../../images/tw.png") center center no-repeat @robins_egg_blue;
+          }
+
+          &.goo {
+            background: url("../../images/goo.png") center center no-repeat @robins_egg_blue;
+          }
+        }
+      }
+    }
+
+    .top-btn {
+      position: absolute;
+      top:-2px;
+      right: 2%;
+
+      display: inline-block;
+      height: 53px;
+      width: 53px;
+
+      border-radius: 50%;
+      background: url("../../images/top-arrow.png") center center no-repeat @robins_egg_blue;
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      @media screen and (min-width: @screen-lg-desktop) {
+        right: 2%;
+      }
+    }
+  }
+
+  h1.logo {
+    position: relative;
+    z-index: 10;
+
+    display: inline-block;
+    float: left;
+    height: 50px;
+    margin: 0 0 0 -18px;
+    width: 125px;
+
+    @media screen and (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+      float: none;
+
+      margin: 0;
+    }
+
+    a {
+      color: @white;
+      text-decoration: none;
+      font-size: 23px;
+      font-family: "MyriadPro-Bold";
+    }
+  }
+
+  ul.navbar-nav {
+    margin-top: 6px;
+
+    li {
+      font-size: 18px;
+      text-transform: uppercase;
+
+      a {
+        padding: 7px 22px;
+
+        color: @white;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+
+  p.footer-tel-number {
+    display: inline-block;
+    margin-top: 6px;
+    padding-left: 24px;
+
+    background: url("../../images/phone.png") 0 center no-repeat;
+
+    font-size: 24px;
+    color: @white;
+  }   
+ 
+}

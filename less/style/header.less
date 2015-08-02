@@ -1,0 +1,253 @@
+header {
+  height: 50px;
+  background-color: @sherpa_blue;
+
+  h1.logo {
+    position: relative;
+    z-index: 10;
+
+    display: inline-block;
+    float: left;
+    height: 50px;
+    margin: 0 0 0 0;
+    width: 125px;
+
+    a {
+      color: @white;
+      text-decoration: none;
+      font-size: 23px;
+      font-family: "MyriadPro-Bold";
+
+      
+      span.logo-img {
+        position: relative;
+        z-index: 28;
+
+        display: inline-block;
+        height: 34px;
+        overflow: hidden;
+        margin-top: 0px;
+        width: 45px;
+
+        i.shadow { //тень от картинки лого
+          position: absolute;
+          top: 14px;
+          left: 14px;
+          z-index: -1;
+
+          height: 34px;
+          width: 30px;
+
+          background-color: @cyprus;
+         
+          -ms-transform: skew(44deg);
+          -webkit-transform: skew(44deg);
+          -moz-transform: skew(44deg);
+          -o-transform: skew(44deg);
+        }
+      }     
+
+      span.logo-text {
+        position: relative;
+        z-index: 33;
+
+        display: inline-block;
+        height: 34px;
+        overflow: hidden;
+        margin-top: 15px;
+        margin-left: -12px;
+        width: 85px;
+
+        i.shadow { //тень от текста лого
+          position: absolute;
+          top: 3px;
+          left: 0;
+          z-index: -1;
+
+          height: 34px;
+          width: 72px;
+
+          background-color: @cyprus;
+         
+          -ms-transform: skew(44deg);
+          -webkit-transform: skew(44deg);
+          -moz-transform: skew(44deg);
+          -o-transform: skew(44deg);
+        }
+      }
+    }
+  }
+
+  //главное меню в хедере которое сворачивается при ширине меньше 768пкс
+  .head-menu-collapsed {
+    position: relative;
+    z-index: 5;
+    
+    display: inline-block;
+    float: left;
+    width: 39%;
+  
+    //обнуляем отступы у елемента .container-fluid внутри главного меню
+    .wrap-colapsed-navbar>nav.navbar-default>.container-fluid {
+      padding: 0;
+    }
+    
+    //список элементов главного меню
+    ul {
+      float: right;
+
+      margin: 0;
+
+      &>li {
+        display: inline-block;
+
+        font-size: 18px;
+        text-transform: uppercase;
+        color: @white;
+
+        @media screen and (max-width: @screen-xs-max) {
+          float: left;
+          vertical-align: top;          
+          width: 50%;
+
+          border-bottom: 5px @mosque solid;
+
+          &:nth-child(odd) {
+            border-right: 5px @mosque solid;
+          }
+
+          a {
+            padding-top: 22px;
+            padding-bottom: 18px;
+          }
+        } 
+      }
+
+      @media screen and (max-width: @screen-sm-min) {
+        // width: 100%;
+        float: none;
+      }
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+      .navbar-collapse {
+        position: absolute;
+
+        width: 100%;
+
+        background-color: @blue_lagoon; 
+        box-shadow: none;
+        border-top: none;
+      }
+    }    
+
+    .tel-number {
+      position: absolute;
+      right: -110%;
+      top: 11px;
+
+      padding-left: 24px;
+
+      background: url("../../images/phone.png") 0 center no-repeat;
+
+      font-size: 24px;
+
+      @media screen and (max-width: @screen-xs-max) {
+        position: static;
+        right: 0;
+        top: 0;
+
+        width: 100%;
+        padding: 18px 0;
+
+        border-right: none!important;
+        border-bottom: none;
+
+        background-position: 37% center;
+      }
+
+      @media screen and  (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        right: -116%;
+        font-size: 22px;
+      }
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+      display: block;
+      float: none;
+      margin-top: -50px;
+      margin-right: -20px;
+      margin-left: -20px;
+      padding-right: 20px;
+      width: initial;
+    }
+  }  
+  
+  //стили для блока с выбором языка
+  .language {
+    display: inline-block;
+    float: left;
+    margin-left: 4%;
+    width: 162px;
+
+    background: url("../../images/language.png") 14px center no-repeat @mosque;
+
+    @media screen and (max-width: @screen-xs-max) {
+      position: absolute;
+      top: 0;
+      left: 47%;
+      z-index: 11;
+
+      float: none;
+    }
+
+    @media screen and  (max-width: @screen-desktop) {
+      margin-left: 0;
+    }
+
+    a {
+      display: inline-block;
+      height: 50px;
+      padding-left: 55px;
+      width: 100%;
+
+      color: @robins_egg_blue;
+      font-size: 16px;
+      line-height: 3;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      span.caret {
+        border-top: 4px @white dashed;
+        margin-top: -5px; 
+      }
+    }
+  }
+
+  //стили меню размещеного под хедером
+  nav.under-header-menu  {
+    background-color: @polar;
+
+    li > a {
+      display: block;
+      padding: 10px 0;
+
+      font-size: 15px;
+      color: @gray;
+      text-transform: uppercase;
+
+      &:hover,
+      &.active {
+        color: @black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
