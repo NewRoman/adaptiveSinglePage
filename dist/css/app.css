@@ -6970,6 +6970,11 @@ header .head-menu-collapsed .tel-number {
     border-bottom: none;
   }
 }
+@media screen and (max-width: 650px) {
+  header .head-menu-collapsed .tel-number {
+    background-position: 32% center;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   header .head-menu-collapsed .tel-number {
     right: -116%;
@@ -7139,7 +7144,7 @@ section.web-design:after {
   content: "";
   background-color: #0fa9b3;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   section.web-design:before,
   section.web-design:after {
     left: 0;
@@ -7156,7 +7161,7 @@ section.web-design:after {
 section.web-design:after {
   left: 60%;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   section.web-design:after {
     left: 72%;
   }
@@ -7197,7 +7202,7 @@ section.web-design .with-right-padding {
 section.web-design .with-right-padding.col-sm-6 {
   width: 46%;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   section.web-design .with-right-padding.col-xs-12 {
     width: 100%;
     padding-right: 20px;
@@ -7337,7 +7342,7 @@ section.about-us:after {
   content: "";
   background-color: #0fa9b3;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   section.about-us:before,
   section.about-us:after {
     left: 0;
@@ -7354,7 +7359,7 @@ section.about-us:after {
 section.about-us:after {
   left: 60%;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   section.about-us:after {
     left: 72%;
   }
@@ -7454,7 +7459,7 @@ footer h1.logo {
   height: 50px;
   margin: 0 0 0 -18px;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   footer h1.logo {
     float: none;
     margin: 0;
@@ -7487,5 +7492,8 @@ footer p.footer-tel-number {
   font-size: 24px;
   color: #fff;
   background: url("../../images/phone.png") 0 center no-repeat;
+}
+body {
+  min-width: 465px;
 }
 /*# sourceMappingURL=app.css.map */
