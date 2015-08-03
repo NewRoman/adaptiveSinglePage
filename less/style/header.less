@@ -79,13 +79,22 @@ header {
   }
 
   //главное меню в хедере которое сворачивается при ширине меньше 768пкс
-  .head-menu-collapsed {
-    position: relative;
-    z-index: 5;
-    
+  .head-menu-collapsed {    
     display: inline-block;
     float: left;
     width: 39%;
+
+    @media screen and (max-width: @screen-xs-max) {
+
+    position: absolute;
+    display: block;
+    float: none;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 20px;
+    width: 100%;
+
+}
   
     //обнуляем отступы у елемента .container-fluid внутри главного меню
     .wrap-colapsed-navbar>nav.navbar-default>.container-fluid {
@@ -124,14 +133,15 @@ header {
       }
 
       @media screen and (max-width: @screen-sm-min) {
-        // width: 100%;
         float: none;
+      
       }
     }
 
     @media screen and (max-width: @screen-xs-max) {
       .navbar-collapse {
         position: absolute;
+        z-index: 99;
 
         width: 100%;
 
@@ -143,7 +153,7 @@ header {
 
     .tel-number {
       position: absolute;
-      right: -110%;
+      left: 83%;
       top: 11px;
 
       padding-left: 24px;
@@ -166,21 +176,18 @@ header {
         background-position: 37% center;
       }
 
+
+      @media screen and (max-width: 650px) {
+       background-position: 32% center; 
+      }
+
       @media screen and  (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-        right: -116%;
+        left: 78%;
         font-size: 22px;
       }
     }
 
-    @media screen and (max-width: @screen-xs-max) {
-      display: block;
-      float: none;
-      margin-top: -50px;
-      margin-right: -20px;
-      margin-left: -20px;
-      padding-right: 20px;
-      width: initial;
-    }
+    
   }  
   
   //стили для блока с выбором языка
@@ -196,7 +203,7 @@ header {
       position: absolute;
       top: 0;
       left: 47%;
-      z-index: 11;
+      z-index: 1111;
 
       float: none;
     }

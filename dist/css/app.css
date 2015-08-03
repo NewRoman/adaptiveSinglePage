@@ -6407,21 +6407,21 @@ button.close {
   opacity: .5;
 }
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background-image:         linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
   background-repeat: repeat-x;
 }
 .carousel-control.right {
   right: 0;
   left: auto;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background-image:         linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
   background-repeat: repeat-x;
 }
 .carousel-control:hover,
@@ -6829,13 +6829,6 @@ button.close {
     display: none !important;
   }
 }
-@media screen and (min-width: 1200px) {
-  .container-fluid {
-    max-width: 1200px;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
 header {
   height: 50px;
   background-color: #005158;
@@ -6901,11 +6894,20 @@ header h1.logo a span.logo-text i.shadow {
        -o-transform: skew(44deg);
 }
 header .head-menu-collapsed {
-  position: relative;
-  z-index: 5;
   display: inline-block;
   float: left;
   width: 39%;
+}
+@media screen and (max-width: 767px) {
+  header .head-menu-collapsed {
+    position: absolute;
+    display: block;
+    float: none;
+    width: 100%;
+    padding-right: 20px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
 }
 header .head-menu-collapsed .wrap-colapsed-navbar > nav.navbar-default > .container-fluid {
   padding: 0;
@@ -6943,6 +6945,7 @@ header .head-menu-collapsed ul > li {
 @media screen and (max-width: 767px) {
   header .head-menu-collapsed .navbar-collapse {
     position: absolute;
+    z-index: 99;
     width: 100%;
     background-color: #007c87;
     border-top: none;
@@ -6953,7 +6956,7 @@ header .head-menu-collapsed ul > li {
 header .head-menu-collapsed .tel-number {
   position: absolute;
   top: 11px;
-  right: -110%;
+  left: 83%;
   padding-left: 24px;
   font-size: 24px;
   background: url("../../images/phone.png") 0 center no-repeat;
@@ -6977,19 +6980,8 @@ header .head-menu-collapsed .tel-number {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   header .head-menu-collapsed .tel-number {
-    right: -116%;
+    left: 78%;
     font-size: 22px;
-  }
-}
-@media screen and (max-width: 767px) {
-  header .head-menu-collapsed {
-    display: block;
-    float: none;
-    width: initial;
-    padding-right: 20px;
-    margin-top: -50px;
-    margin-right: -20px;
-    margin-left: -20px;
   }
 }
 header .language {
@@ -7004,7 +6996,7 @@ header .language {
     position: absolute;
     top: 0;
     left: 47%;
-    z-index: 11;
+    z-index: 1111;
     float: none;
   }
 }
@@ -7044,6 +7036,8 @@ header nav.under-header-menu li > a.active {
   text-decoration: none;
 }
 section.slider-block {
+  position: relative;
+  z-index: 88;
   margin-top: 40px;
 }
 section.slider-block > .carousel {
@@ -7063,7 +7057,8 @@ section.slider-block a.carousel-control {
   width: 52px;
   height: 52px;
   vertical-align: middle;
-  background: #005158;
+  background-color: transparent;
+  background-color: #005158;
   background-repeat: no-repeat;
   border: 2px #fff solid;
   border-radius: 50%;
@@ -7493,7 +7488,17 @@ footer p.footer-tel-number {
   color: #fff;
   background: url("../../images/phone.png") 0 center no-repeat;
 }
+@media screen and (min-width: 1200px) {
+  .container-fluid {
+    max-width: 1200px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
 body {
   min-width: 465px;
+}
+html {
+  max-height: 100%;
 }
 /*# sourceMappingURL=app.css.map */
